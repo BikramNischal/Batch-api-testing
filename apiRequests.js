@@ -4,7 +4,7 @@
 
 // Default API configuration (can be overridden)
 let API_CONFIG = {
-    endpoint: "https://teststrategise.aigeeks.dev/api/v1/backend/super-api-v2",
+    endpoint: "https://example.dev/api/v1/backend/super-api-v2",
     token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2ZlMDQ2ZTk5NmZhMTNjZjgyZjEzMjIiLCJpYXQiOjE3NTU1ODM4MjksImV4cCI6MTc1NjE4ODYyOX0.WrjUGc9qthQMoPZl6J_dXpoXHif1_qaU0MXnfP14CWk",
     method: "GET",
     body: null

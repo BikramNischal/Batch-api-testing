@@ -22,7 +22,7 @@
     <meta name="twitter:description" content="Test multiple concurrent API requests with ease. Supports all HTTP methods, authentication, and multiple payload formats.">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='%234a90e2'/><circle cx='50' cy='50' r='25' fill='white'/></svg>">
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -212,7 +212,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>🚀 API Request Test - Dynamic Concurrent Requests</h1>
+        <h1>API Request Test - Dynamic Concurrent Requests</h1>
         
         <div class="config-section">
             <h3>API Configuration</h3>
@@ -233,7 +233,7 @@
             <div class="config-item">
                 <span class="config-label">Bearer Token:</span>
                 <input type="password" id="bearerToken" placeholder="Optional - leave empty for public endpoints" value="" style="margin-left: 10px; padding: 5px 10px; border: 1px solid #ddd; border-radius: 4px; width: 400px;">
-                <button onclick="toggleTokenVisibility()" style="margin-left: 5px; padding: 5px 10px; background: #6c757d; color: white; border: none; border-radius: 4px; cursor: pointer;">👁️</button>
+                <button onclick="toggleTokenVisibility()" style="margin-left: 5px; padding: 5px 10px; background: #6c757d; color: white; border: none; border-radius: 4px; cursor: pointer;">Show/Hide</button>
                 <button onclick="clearToken()" style="margin-left: 5px; padding: 5px 10px; background: #dc3545; color: white; border: none; border-radius: 4px; cursor: pointer;">Clear</button>
             </div>
             <div class="config-item" id="requestBodySection" style="display: none;">
@@ -331,8 +331,8 @@
             <div class="output-tabs">
                 <button class="tab-button active" onclick="switchTab('console')">Console Output</button>
                 <button class="tab-button" onclick="switchTab('json')">JSON Results</button>
-                <button class="btn btn-secondary" style="margin-left: auto; padding: 6px 12px;" onclick="downloadResults()">💾 Download JSON</button>
-                <button class="btn btn-secondary" style="margin-left: 5px; padding: 6px 12px;" onclick="copyResults()">📋 Copy JSON</button>
+                <button class="btn btn-secondary" style="margin-left: auto; padding: 6px 12px;" onclick="downloadResults()">Download JSON</button>
+                <button class="btn btn-secondary" style="margin-left: 5px; padding: 6px 12px;" onclick="copyResults()">Copy JSON</button>
             </div>
             <div class="console-output" id="consoleOutput">Ready to run requests. Click the button above to start...</div>
             <div class="json-output" id="jsonOutput">JSON results will appear here after running requests...</div>
@@ -342,7 +342,7 @@
     <script>
         // Dynamic API configuration
         let API_CONFIG = {
-            endpoint: "https://teststrategise.aigeeks.dev/api/v1/backend/super-api-v2",
+            endpoint: "https://example.dev/api/v1/backend/super-api-v2",
             token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2ZlMDQ2ZTk5NmZhMTNjZjgyZjEzMjIiLCJpYXQiOjE3NTU1ODM4MjksImV4cCI6MTc1NjE4ODYyOX0.WrjUGc9qthQMoPZl6J_dXpoXHif1_qaU0MXnfP14CWk",
             method: "GET",
             body: null
@@ -390,7 +390,7 @@
         // Download results as JSON file
         function downloadResults() {
             if (!currentResults) {
-                log('❌ No results available to download. Run requests first.');
+                log('No results available to download. Run requests first.');
                 return;
             }
             
@@ -419,13 +419,13 @@
             document.body.removeChild(a);
             URL.revokeObjectURL(url);
             
-            log(`💾 Downloaded results as: ${filename}`);
+            log(`Downloaded results as: ${filename}`);
         }
         
         // Copy results to clipboard
         async function copyResults() {
             if (!currentResults) {
-                log('❌ No results available to copy. Run requests first.');
+                log('No results available to copy. Run requests first.');
                 return;
             }
             
@@ -442,9 +442,9 @@
             
             try {
                 await navigator.clipboard.writeText(JSON.stringify(output, null, 2));
-                log('📋 Results copied to clipboard!');
+                log('Results copied to clipboard!');
             } catch (error) {
-                log('❌ Failed to copy to clipboard: ' + error.message);
+                log('Failed to copy to clipboard: ' + error.message);
             }
         }
         
@@ -506,7 +506,7 @@
         // Clear token
         function clearToken() {
             document.getElementById('bearerToken').value = '';
-            log('🔑 Bearer token cleared - requests will be sent without authentication');
+            log('Bearer token cleared - requests will be sent without authentication');
         }
         
         // Format JSON body
@@ -515,9 +515,9 @@
             try {
                 const parsed = JSON.parse(bodyInput.value);
                 bodyInput.value = JSON.stringify(parsed, null, 2);
-                log('✅ JSON formatted successfully');
+                log('JSON formatted successfully');
             } catch (error) {
-                log('❌ Invalid JSON format: ' + error.message);
+                log('Invalid JSON format: ' + error.message);
             }
         }
         
@@ -551,13 +551,13 @@
                     const parsed = JSON.parse(line);
                     formattedLines.push(JSON.stringify(parsed, null, 2));
                 } catch (error) {
-                    log(`❌ Invalid JSON on line: ${line}`);
+                    log(`Invalid JSON on line: ${line}`);
                     return;
                 }
             }
             
             input.value = formattedLines.join('\n\n');
-            log('✅ All payloads formatted successfully');
+            log('All payloads formatted successfully');
         }
         
         function clearMultiplePayloads() {
@@ -583,9 +583,9 @@
             try {
                 const parsed = JSON.parse(input.value);
                 input.value = JSON.stringify(parsed, null, 2);
-                log('✅ Base payload formatted successfully');
+                log('Base payload formatted successfully');
             } catch (error) {
-                log('❌ Invalid JSON format: ' + error.message);
+                log('Invalid JSON format: ' + error.message);
             }
         }
         
@@ -598,7 +598,7 @@
             const numberOfRequests = parseInt(document.getElementById('numberOfRequests').value) || 3;
             
             if (!basePayload.trim()) {
-                log('❌ Please enter a base payload first');
+                log('Please enter a base payload first');
                 return;
             }
             
@@ -606,7 +606,7 @@
                 const base = JSON.parse(basePayload);
                 const variations = generatePayloadVariations(base, Math.min(numberOfRequests, 3));
                 
-                log('🔍 Preview of payload variations:');
+                log('Preview of payload variations:');
                 variations.forEach((variation, index) => {
                     log(`Payload ${index + 1}: ${JSON.stringify(variation)}`);
                 });
@@ -616,7 +616,7 @@
                 }
                 
             } catch (error) {
-                log('❌ Invalid base payload JSON: ' + error.message);
+                log('Invalid base payload JSON: ' + error.message);
             }
         }
         
@@ -626,13 +626,13 @@
             try {
                 const parsed = JSON.parse(input.value);
                 if (!Array.isArray(parsed)) {
-                    log('❌ Payload must be a JSON array');
+                    log('Payload must be a JSON array');
                     return;
                 }
                 input.value = JSON.stringify(parsed, null, 2);
-                log('✅ Payload array formatted successfully');
+                log('Payload array formatted successfully');
             } catch (error) {
-                log('❌ Invalid JSON array format: ' + error.message);
+                log('Invalid JSON array format: ' + error.message);
             }
         }
         
@@ -643,109 +643,109 @@
         function generateSampleArray() {
             const sampleArray = [
                 {
-                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2ZlMDQ2ZTk5NmZhMTNjZjgyZjEzMjIiLCJpYXQiOjE3NTU1ODM4MjksImV4cCI6MTc1NjE4ODYyOX0.WrjUGc9qthQMoPZl6J_dXpoXHif1_qaU0MXnfP14CWk",
-                    "currentUrl": "https://teststrategise.aigeeks.dev/",
-                    "backendUrl": "https://teststrategise.aigeeks.dev/api/v1/backend",
+                    "token": "example-token",
+                    "currentUrl": "https://example.com",
+                    "backendUrl": "https://example.com/api/v1/backend",
                     "type": "ExecutiveSummary",
                     "batchnumber": "1"
                 },
                 {
-                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2ZlMDQ2ZTk5NmZhMTNjZjgyZjEzMjIiLCJpYXQiOjE3NTU1ODM4MjksImV4cCI6MTc1NjE4ODYyOX0.WrjUGc9qthQMoPZl6J_dXpoXHif1_qaU0MXnfP14CWk",
-                    "currentUrl": "https://teststrategise.aigeeks.dev/",
-                    "backendUrl": "https://teststrategise.aigeeks.dev/api/v1/backend",
+                    "token": "example-token",
+                    "currentUrl": "https://example.com",
+                    "backendUrl": "https://example.com/api/v1/backend",
                     "type": "ExecutiveSummary",
                     "batchnumber": "2"
                 },
                 {
-                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2ZlMDQ2ZTk5NmZhMTNjZjgyZjEzMjIiLCJpYXQiOjE3NTU1ODM4MjksImV4cCI6MTc1NjE4ODYyOX0.WrjUGc9qthQMoPZl6J_dXpoXHif1_qaU0MXnfP14CWk",
-                    "currentUrl": "https://teststrategise.aigeeks.dev/",
-                    "backendUrl": "https://teststrategise.aigeeks.dev/api/v1/backend",
+                    "token": "example-token",
+                    "currentUrl": "https://example.com",
+                    "backendUrl": "https://example.com/api/v1/backend",
                     "type": "ExecutiveSummary",
                     "batchnumber": "3"
                 }
             ];
             
             document.getElementById('payloadArray').value = JSON.stringify(sampleArray, null, 2);
-            log('✅ Sample payload array generated');
+            log('Sample payload array generated');
         }
         
         function convertToArray() {
             // Convert the 10 payloads you provided to array format
             const yourPayloads = [
                 {
-                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2ZlMDQ2ZTk5NmZhMTNjZjgyZjEzMjIiLCJpYXQiOjE3NTU1ODM4MjksImV4cCI6MTc1NjE4ODYyOX0.WrjUGc9qthQMoPZl6J_dXpoXHif1_qaU0MXnfP14CWk",
-                    "currentUrl": "https://teststrategise.aigeeks.dev/",
-                    "backendUrl": "https://teststrategise.aigeeks.dev/api/v1/backend",
+                    "token": "example-token",
+                    "currentUrl": "https://example.dev/",
+                    "backendUrl": "https://example.dev/api/v1/backend",
                     "type": "ExecutiveSummary",
                     "batchnumber": "1"
                 },
                 {
-                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2ZlMDQ2ZTk5NmZhMTNjZjgyZjEzMjIiLCJpYXQiOjE3NTU1ODM4MjksImV4cCI6MTc1NjE4ODYyOX0.WrjUGc9qthQMoPZl6J_dXpoXHif1_qaU0MXnfP14CWk",
-                    "currentUrl": "https://teststrategise.aigeeks.dev/",
-                    "backendUrl": "https://teststrategise.aigeeks.dev/api/v1/backend",
+                    "token": "example-token",
+                    "currentUrl": "https://example.dev/",
+                    "backendUrl": "https://example.dev/api/v1/backend",
                     "type": "ExecutiveSummary",
                     "batchnumber": "2"
                 },
                 {
                     "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2ZlMDQ2ZTk5NmZhMTNjZjgyZjEzMjIiLCJpYXQiOjE3NTU1ODM4MjksImV4cCI6MTc1NjE4ODYyOX0.WrjUGc9qthQMoPZl6J_dXpoXHif1_qaU0MXnfP14CWk",
-                    "currentUrl": "https://teststrategise.aigeeks.dev/",
-                    "backendUrl": "https://teststrategise.aigeeks.dev/api/v1/backend",
+                    "currentUrl": "https://example.dev/",
+                    "backendUrl": "https://example.dev/api/v1/backend",
                     "type": "ExecutiveSummary",
                     "batchnumber": "3"
                 },
                 {
                     "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2ZlMDQ2ZTk5NmZhMTNjZjgyZjEzMjIiLCJpYXQiOjE3NTU1ODM4MjksImV4cCI6MTc1NjE4ODYyOX0.WrjUGc9qthQMoPZl6J_dXpoXHif1_qaU0MXnfP14CWk",
-                    "currentUrl": "https://teststrategise.aigeeks.dev/",
-                    "backendUrl": "https://teststrategise.aigeeks.dev/api/v1/backend",
+                    "currentUrl": "https://example.dev/",
+                    "backendUrl": "https://example.dev/api/v1/backend",
                     "type": "ExecutiveSummary",
                     "batchnumber": "4"
                 },
                 {
                     "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2ZlMDQ2ZTk5NmZhMTNjZjgyZjEzMjIiLCJpYXQiOjE3NTU1ODM4MjksImV4cCI6MTc1NjE4ODYyOX0.WrjUGc9qthQMoPZl6J_dXpoXHif1_qaU0MXnfP14CWk",
-                    "currentUrl": "https://teststrategise.aigeeks.dev/",
-                    "backendUrl": "https://teststrategise.aigeeks.dev/api/v1/backend",
+                    "currentUrl": "https://example.dev/",
+                    "backendUrl": "https://example.dev/api/v1/backend",
                     "type": "ExecutiveSummary",
                     "batchnumber": "5"
                 },
                 {
-                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2ZlMDQ2ZTk5NmZhMTNjZjgyZjEzMjIiLCJpYXQiOjE3NTU1ODM4MjksImV4cCI6MTc1NjE4ODYyOX0.WrjUGc9qthQMoPZl6J_dXpoXHif1_qaU0MXnfP14CWk",
-                    "currentUrl": "https://teststrategise.aigeeks.dev/",
-                    "backendUrl": "https://teststrategise.aigeeks.dev/api/v1/backend",
+                    "token": "example-token",
+                    "currentUrl": "https://example.dev/",
+                    "backendUrl": "https://example.dev/api/v1/backend",
                     "type": "ExecutiveSummary",
                     "batchnumber": "6"
                 },
                 {
                     "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2ZlMDQ2ZTk5NmZhMTNjZjgyZjEzMjIiLCJpYXQiOjE3NTU1ODM4MjksImV4cCI6MTc1NjE4ODYyOX0.WrjUGc9qthQMoPZl6J_dXpoXHif1_qaU0MXnfP14CWk",
-                    "currentUrl": "https://teststrategise.aigeeks.dev/",
-                    "backendUrl": "https://teststrategise.aigeeks.dev/api/v1/backend",
+                    "currentUrl": "https://example.dev/",
+                    "backendUrl": "https://example.dev/api/v1/backend",
                     "type": "ExecutiveSummary",
                     "batchnumber": "7"
                 },
                 {
-                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2ZlMDQ2ZTk5NmZhMTNjZjgyZjEzMjIiLCJpYXQiOjE3NTU1ODM4MjksImV4cCI6MTc1NjE4ODYyOX0.WrjUGc9qthQMoPZl6J_dXpoXHif1_qaU0MXnfP14CWk",
-                    "currentUrl": "https://teststrategise.aigeeks.dev/",
-                    "backendUrl": "https://teststrategise.aigeeks.dev/api/v1/backend",
+                    "token": "example-token",
+                    "currentUrl": "https://example.com",
+                    "backendUrl": "https://example.com/api/v1/backend",
                     "type": "ExecutiveSummary",
                     "batchnumber": "8"
                 },
                 {
                     "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2ZlMDQ2ZTk5NmZhMTNjZjgyZjEzMjIiLCJpYXQiOjE3NTU1ODM4MjksImV4cCI6MTc1NjE4ODYyOX0.WrjUGc9qthQMoPZl6J_dXpoXHif1_qaU0MXnfP14CWk",
-                    "currentUrl": "https://teststrategise.aigeeks.dev/",
-                    "backendUrl": "https://teststrategise.aigeeks.dev/api/v1/backend",
+                    "currentUrl": "https://example.com",
+                    "backendUrl": "https://example.com/api/v1/backend",
                     "type": "ExecutiveSummary",
                     "batchnumber": "9"
                 },
                 {
-                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2ZlMDQ2ZTk5NmZhMTNjZjgyZjEzMjIiLCJpYXQiOjE3NTU1ODM4MjksImV4cCI6MTc1NjE4ODYyOX0.WrjUGc9qthQMoPZl6J_dXpoXHif1_qaU0MXnfP14CWk",
-                    "currentUrl": "https://teststrategise.aigeeks.dev/",
-                    "backendUrl": "https://teststrategise.aigeeks.dev/api/v1/backend",
+                    "token": "example-token",
+                    "currentUrl": "https://example.com",
+                    "backendUrl": "https://example.com/api/v1/backend",
                     "type": "ExecutiveSummary",
                     "batchnumber": "10"
                 }
             ];
             
             document.getElementById('payloadArray').value = JSON.stringify(yourPayloads, null, 2);
-            log('✅ Your 10 payloads converted to array format!');
+            log('Your 10 payloads converted to array format!');
         }
         
         // Generate payload variations (browser version)
@@ -800,26 +800,26 @@
             } else if (payloadMode === 'array') {
                 const arrayText = document.getElementById('payloadArray').value;
                 if (!arrayText.trim()) {
-                    log('❌ Please enter a payload array');
+                    log('Please enter a payload array');
                     return null;
                 }
                 
                 try {
                     const payloadArray = JSON.parse(arrayText);
                     if (!Array.isArray(payloadArray)) {
-                        log('❌ Payload must be a JSON array');
+                        log('Payload must be a JSON array');
                         return null;
                     }
                     
                     if (payloadArray.length === 0) {
-                        log('❌ Payload array cannot be empty');
+                        log('Payload array cannot be empty');
                         return null;
                     }
                     
                     // Validate that all items are objects
                     for (let i = 0; i < payloadArray.length; i++) {
                         if (typeof payloadArray[i] !== 'object' || payloadArray[i] === null) {
-                            log(`❌ Payload at index ${i} must be a valid JSON object`);
+                            log(`Payload at index ${i} must be a valid JSON object`);
                             return null;
                         }
                     }
@@ -831,7 +831,7 @@
                     return configs;
                     
                 } catch (error) {
-                    log('❌ Invalid JSON array: ' + error.message);
+                    log('Invalid JSON array: ' + error.message);
                     return null;
                 }
                 
@@ -844,7 +844,7 @@
                         const payload = JSON.parse(line);
                         configs.push({ method, endpoint, token, body: payload });
                     } catch (error) {
-                        log(`❌ Invalid JSON payload: ${line}`);
+                        log(`Invalid JSON payload: ${line}`);
                         return null;
                     }
                 }
@@ -854,7 +854,7 @@
             } else if (payloadMode === 'variations') {
                 const basePayloadText = document.getElementById('basePayload').value;
                 if (!basePayloadText.trim()) {
-                    log('❌ Please enter a base payload for variations');
+                    log('Please enter a base payload for variations');
                     return null;
                 }
                 
@@ -869,7 +869,7 @@
                     return configs;
                     
                 } catch (error) {
-                    log('❌ Invalid base payload JSON: ' + error.message);
+                    log('Invalid base payload JSON: ' + error.message);
                     return null;
                 }
             }
@@ -893,7 +893,7 @@
             const startTime = Date.now();
             
             try {
-                log(`🚀 Starting ${config.method} request ${requestId} to ${config.endpoint}...`);
+                log(`Starting ${config.method} request ${requestId} to ${config.endpoint}...`);
                 
                 const fetchOptions = {
                     method: config.method,
@@ -938,14 +938,14 @@
                 if (response.ok) {
                     try {
                         result.data = await response.json();
-                        log(`✅ Request ${requestId} completed successfully (${duration}ms)`);
+                        log(`Request ${requestId} completed successfully (${duration}ms)`);
                     } catch (parseError) {
                         result.data = await response.text();
-                        log(`✅ Request ${requestId} completed with text response (${duration}ms)`);
+                        log(`Request ${requestId} completed with text response (${duration}ms)`);
                     }
                 } else {
                     result.error = `HTTP ${response.status}: ${response.statusText}`;
-                    log(`❌ Request ${requestId} failed: ${result.error} (${duration}ms)`);
+                    log(`Request ${requestId} failed: ${result.error} (${duration}ms)`);
                 }
 
                 return result;
@@ -968,7 +968,7 @@
                     error: error.message
                 };
 
-                log(`❌ Request ${requestId} failed: ${result.error} (${duration}ms)`);
+                log(`Request ${requestId} failed: ${result.error} (${duration}ms)`);
                 return result;
             }
         }
@@ -981,7 +981,7 @@
             
             // Validate input
             if (isNaN(numberOfRequests) || numberOfRequests < 1 || numberOfRequests > 100) {
-                log('❌ Invalid number of requests. Please enter a number between 1 and 100.');
+                log('Invalid number of requests. Please enter a number between 1 and 100.');
                 return;
             }
             
@@ -1000,7 +1000,7 @@
             
             // Validate configuration
             if (!baseConfig.endpoint.trim()) {
-                log('❌ Please enter a valid endpoint URL.');
+                log('Please enter a valid endpoint URL.');
                 return;
             }
             
@@ -1013,25 +1013,25 @@
             updateProgress(0, numberOfRequests);
             
             clearConsole();
-            log(`🌟 Starting ${numberOfRequests} concurrent ${baseConfig.method} requests...`);
-            log(`📡 Endpoint: ${baseConfig.endpoint}`);
+            log(`Starting ${numberOfRequests} concurrent ${baseConfig.method} requests...`);
+            log(`Endpoint: ${baseConfig.endpoint}`);
             if (baseConfig.token && baseConfig.token.trim()) {
-                log(`🔑 Using Bearer Token: ${baseConfig.token.substring(0, 20)}...`);
+                log(`Using Bearer Token: ${baseConfig.token.substring(0, 20)}...`);
             } else {
-                log(`🔑 No authentication token (public endpoint)`);
+                log(`No authentication token (public endpoint)`);
             }
-            log(`🔧 Method: ${baseConfig.method}`);
+            log(`Method: ${baseConfig.method}`);
             
             // Show payload information
             if (Array.isArray(config)) {
                 const uniquePayloads = [...new Set(config.map(c => JSON.stringify(c.body)))];
                 if (uniquePayloads.length === 1 && config[0].body) {
-                    log(`📦 Request Body (same for all): ${typeof config[0].body === 'string' ? config[0].body.substring(0, 100) : JSON.stringify(config[0].body).substring(0, 100)}...`);
+                    log(`Request Body (same for all): ${typeof config[0].body === 'string' ? config[0].body.substring(0, 100) : JSON.stringify(config[0].body).substring(0, 100)}...`);
                 } else if (uniquePayloads.length > 1) {
-                    log(`📦 Using ${uniquePayloads.length} different payloads across ${numberOfRequests} requests`);
+                    log(`Using ${uniquePayloads.length} different payloads across ${numberOfRequests} requests`);
                 }
             } else if (config.body) {
-                log(`📦 Request Body: ${typeof config.body === 'string' ? config.body.substring(0, 100) : JSON.stringify(config.body).substring(0, 100)}...`);
+                log(`Request Body: ${typeof config.body === 'string' ? config.body.substring(0, 100) : JSON.stringify(config.body).substring(0, 100)}...`);
             }
             log('');
             
@@ -1082,16 +1082,16 @@
                 
                 // Display summary
                 log('');
-                log('📊 RESULTS SUMMARY:');
+                log('RESULTS SUMMARY:');
                 log('='.repeat(50));
                 log(`Total execution time: ${totalDuration}ms`);
                 
                 const successCount = results.filter(r => r.success).length;
                 const failureCount = results.filter(r => !r.success).length;
                 
-                log(`✅ Successful requests: ${successCount}/${numberOfRequests}`);
-                log(`❌ Failed requests: ${failureCount}/${numberOfRequests}`);
-                log(`📈 Success rate: ${(successCount/numberOfRequests*100).toFixed(1)}%`);
+                log(`Successful requests: ${successCount}/${numberOfRequests}`);
+                log(`Failed requests: ${failureCount}/${numberOfRequests}`);
+                log(`Success rate: ${(successCount/numberOfRequests*100).toFixed(1)}%`);
                 log('');
                 
                 // Display individual results (limit to first 10 for readability)
@@ -1103,7 +1103,7 @@
                 
                 results.slice(0, resultsToShow).forEach(result => {
                     log(`Request ${result.requestId}:`);
-                    log(`  Status: ${result.success ? '✅ Success' : '❌ Failed'}`);
+                    log(`  Status: ${result.success ? 'Success' : 'Failed'}`);
                     log(`  HTTP Status: ${result.status || 'N/A'}`);
                     log(`  Duration: ${result.duration}`);
                     log(`  Timestamp: ${result.timestamp}`);
@@ -1138,13 +1138,13 @@
                 };
                 
                 jsonOutput.textContent = JSON.stringify(jsonOutputData, null, 2);
-                log('💡 Switch to "JSON Results" tab to view complete prettified output');
+                log('Switch to "JSON Results" tab to view complete prettified output');
                 
                 // Set success status
                 setStatus(successCount === numberOfRequests ? 'success' : 'error');
                 
             } catch (error) {
-                log(`❌ Unexpected error during concurrent requests: ${error.message}`);
+                log(`Unexpected error during concurrent requests: ${error.message}`);
                 setStatus('error');
             } finally {
                 // Re-enable button
@@ -1154,7 +1154,7 @@
                 setStatus(statusIndicator.className.includes('success') ? 'success' : 'error');
                 
                 log('');
-                log(`🎉 Request execution completed! (${numberOfRequests} requests)`);
+                log(`Request execution completed! (${numberOfRequests} requests)`);
             }
         }
         

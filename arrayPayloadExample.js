@@ -17,22 +17,22 @@ async function basicArrayExample() {
     const payloadArray = [
         {
             "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2ZlMDQ2ZTk5NmZhMTNjZjgyZjEzMjIiLCJpYXQiOjE3NTU1ODM4MjksImV4cCI6MTc1NjE4ODYyOX0.WrjUGc9qthQMoPZl6J_dXpoXHif1_qaU0MXnfP14CWk",
-            "currentUrl": "https://teststrategise.aigeeks.dev/",
-            "backendUrl": "https://teststrategise.aigeeks.dev/api/v1/backend",
+            "currentUrl": "https://example.dev/",
+            "backendUrl": "https://example.dev/api/v1/backend",
             "type": "ExecutiveSummary",
             "batchnumber": "1"
         },
         {
             "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2ZlMDQ2ZTk5NmZhMTNjZjgyZjEzMjIiLCJpYXQiOjE3NTU1ODM4MjksImV4cCI6MTc1NjE4ODYyOX0.WrjUGc9qthQMoPZl6J_dXpoXHif1_qaU0MXnfP14CWk",
-            "currentUrl": "https://teststrategise.aigeeks.dev/",
-            "backendUrl": "https://teststrategise.aigeeks.dev/api/v1/backend",
+            "currentUrl": "https://example.dev/",
+            "backendUrl": "https://example.dev/api/v1/backend",
             "type": "ExecutiveSummary",
             "batchnumber": "2"
         },
         {
             "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2ZlMDQ2ZTk5NmZhMTNjZjgyZjEzMjIiLCJpYXQiOjE3NTU1ODM4MjksImV4cCI6MTc1NjE4ODYyOX0.WrjUGc9qthQMoPZl6J_dXpoXHif1_qaU0MXnfP14CWk",
-            "currentUrl": "https://teststrategise.aigeeks.dev/",
-            "backendUrl": "https://teststrategise.aigeeks.dev/api/v1/backend",
+            "currentUrl": "https://example.dev/",
+            "backendUrl": "https://example.dev/api/v1/backend",
             "type": "ExecutiveSummary",
             "batchnumber": "3"
         }
@@ -46,7 +46,7 @@ async function basicArrayExample() {
         
         const results = await sendRequestsWithPayloadArray(payloadArray, {
             method: 'POST',
-            endpoint: 'https://teststrategise.aigeeks.dev/api/v1/backend/super-api-v2',
+            endpoint: 'https://example.dev/api/v1/backend/super-api-v2',
             token: '' // Token is in each payload
         });
         
@@ -77,71 +77,71 @@ async function your10PayloadsExample() {
     const your10Payloads = [
         {
             "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2ZlMDQ2ZTk5NmZhMTNjZjgyZjEzMjIiLCJpYXQiOjE3NTU1ODM4MjksImV4cCI6MTc1NjE4ODYyOX0.WrjUGc9qthQMoPZl6J_dXpoXHif1_qaU0MXnfP14CWk",
-            "currentUrl": "https://teststrategise.aigeeks.dev/",
-            "backendUrl": "https://teststrategise.aigeeks.dev/api/v1/backend",
+            "currentUrl": "https://example.dev/",
+            "backendUrl": "https://example.dev/api/v1/backend",
             "type": "ExecutiveSummary",
             "batchnumber": "1"
         },
         {
             "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2ZlMDQ2ZTk5NmZhMTNjZjgyZjEzMjIiLCJpYXQiOjE3NTU1ODM4MjksImV4cCI6MTc1NjE4ODYyOX0.WrjUGc9qthQMoPZl6J_dXpoXHif1_qaU0MXnfP14CWk",
-            "currentUrl": "https://teststrategise.aigeeks.dev/",
-            "backendUrl": "https://teststrategise.aigeeks.dev/api/v1/backend",
+            "currentUrl": "https://example.dev/",
+            "backendUrl": "https://example.dev/api/v1/backend",
             "type": "ExecutiveSummary",
             "batchnumber": "2"
         },
         {
             "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2ZlMDQ2ZTk5NmZhMTNjZjgyZjEzMjIiLCJpYXQiOjE3NTU1ODM4MjksImV4cCI6MTc1NjE4ODYyOX0.WrjUGc9qthQMoPZl6J_dXpoXHif1_qaU0MXnfP14CWk",
-            "currentUrl": "https://teststrategise.aigeeks.dev/",
-            "backendUrl": "https://teststrategise.aigeeks.dev/api/v1/backend",
+            "currentUrl": "https://example.dev/",
+            "backendUrl": "https://example.dev/api/v1/backend",
             "type": "ExecutiveSummary",
             "batchnumber": "3"
         },
         {
             "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2ZlMDQ2ZTk5NmZhMTNjZjgyZjEzMjIiLCJpYXQiOjE3NTU1ODM4MjksImV4cCI6MTc1NjE4ODYyOX0.WrjUGc9qthQMoPZl6J_dXpoXHif1_qaU0MXnfP14CWk",
-            "currentUrl": "https://teststrategise.aigeeks.dev/",
-            "backendUrl": "https://teststrategise.aigeeks.dev/api/v1/backend",
+            "currentUrl": "https://example.dev/",
+            "backendUrl": "https://example.dev/api/v1/backend",
             "type": "ExecutiveSummary",
             "batchnumber": "4"
         },
         {
             "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2ZlMDQ2ZTk5NmZhMTNjZjgyZjEzMjIiLCJpYXQiOjE3NTU1ODM4MjksImV4cCI6MTc1NjE4ODYyOX0.WrjUGc9qthQMoPZl6J_dXpoXHif1_qaU0MXnfP14CWk",
-            "currentUrl": "https://teststrategise.aigeeks.dev/",
-            "backendUrl": "https://teststrategise.aigeeks.dev/api/v1/backend",
+            "currentUrl": "https://example.dev/",
+            "backendUrl": "https://example.dev/api/v1/backend",
             "type": "ExecutiveSummary",
             "batchnumber": "5"
         },
         {
             "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2ZlMDQ2ZTk5NmZhMTNjZjgyZjEzMjIiLCJpYXQiOjE3NTU1ODM4MjksImV4cCI6MTc1NjE4ODYyOX0.WrjUGc9qthQMoPZl6J_dXpoXHif1_qaU0MXnfP14CWk",
-            "currentUrl": "https://teststrategise.aigeeks.dev/",
-            "backendUrl": "https://teststrategise.aigeeks.dev/api/v1/backend",
+            "currentUrl": "https://example.dev/",
+            "backendUrl": "https://example.dev/api/v1/backend",
             "type": "ExecutiveSummary",
             "batchnumber": "6"
         },
         {
             "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2ZlMDQ2ZTk5NmZhMTNjZjgyZjEzMjIiLCJpYXQiOjE3NTU1ODM4MjksImV4cCI6MTc1NjE4ODYyOX0.WrjUGc9qthQMoPZl6J_dXpoXHif1_qaU0MXnfP14CWk",
-            "currentUrl": "https://teststrategise.aigeeks.dev/",
-            "backendUrl": "https://teststrategise.aigeeks.dev/api/v1/backend",
+            "currentUrl": "https://example.dev/",
+            "backendUrl": "https://example.dev/api/v1/backend",
             "type": "ExecutiveSummary",
             "batchnumber": "7"
         },
         {
             "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2ZlMDQ2ZTk5NmZhMTNjZjgyZjEzMjIiLCJpYXQiOjE3NTU1ODM4MjksImV4cCI6MTc1NjE4ODYyOX0.WrjUGc9qthQMoPZl6J_dXpoXHif1_qaU0MXnfP14CWk",
-            "currentUrl": "https://teststrategise.aigeeks.dev/",
-            "backendUrl": "https://teststrategise.aigeeks.dev/api/v1/backend",
+            "currentUrl": "https://example.dev/",
+            "backendUrl": "https://example.dev/api/v1/backend",
             "type": "ExecutiveSummary",
             "batchnumber": "8"
         },
         {
             "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2ZlMDQ2ZTk5NmZhMTNjZjgyZjEzMjIiLCJpYXQiOjE3NTU1ODM4MjksImV4cCI6MTc1NjE4ODYyOX0.WrjUGc9qthQMoPZl6J_dXpoXHif1_qaU0MXnfP14CWk",
-            "currentUrl": "https://teststrategise.aigeeks.dev/",
-            "backendUrl": "https://teststrategise.aigeeks.dev/api/v1/backend",
+            "currentUrl": "https://example.dev/",
+            "backendUrl": "https://example.dev/api/v1/backend",
             "type": "ExecutiveSummary",
             "batchnumber": "9"
         },
         {
             "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2ZlMDQ2ZTk5NmZhMTNjZjgyZjEzMjIiLCJpYXQiOjE3NTU1ODM4MjksImV4cCI6MTc1NjE4ODYyOX0.WrjUGc9qthQMoPZl6J_dXpoXHif1_qaU0MXnfP14CWk",
-            "currentUrl": "https://teststrategise.aigeeks.dev/",
-            "backendUrl": "https://teststrategise.aigeeks.dev/api/v1/backend",
+            "currentUrl": "https://example.dev/",
+            "backendUrl": "https://example.dev/api/v1/backend",
             "type": "ExecutiveSummary",
             "batchnumber": "10"
         }
@@ -155,7 +155,7 @@ async function your10PayloadsExample() {
         
         const results = await sendRequestsWithPayloadArray(your10Payloads, {
             method: 'POST',
-            endpoint: 'https://teststrategise.aigeeks.dev/api/v1/backend/super-api-v2',
+            endpoint: 'https://example.dev/api/v1/backend/super-api-v2',
             token: '' // Token is in each payload
         });
         

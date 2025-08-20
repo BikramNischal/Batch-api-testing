@@ -56,7 +56,7 @@ async function structuredJsonExample() {
                     .reduce((sum, time) => sum + time, 0) / results.filter(r => r.success).length || 0
             },
             summary: {
-                endpoint: "https://teststrategise.aigeeks.dev/api/v1/backend/super-api-v2",
+                endpoint: "https://example.dev/api/v1/backend/super-api-v2",
                 method: "GET",
                 authType: "Bearer Token",
                 concurrentRequests: results.length
@@ -171,7 +171,7 @@ async function performanceJsonExample() {
         const performanceOutput = {
             testInfo: {
                 timestamp: new Date().toISOString(),
-                endpoint: "https://teststrategise.aigeeks.dev/api/v1/backend/super-api-v2",
+                endpoint: "https://example.dev/api/v1/backend/super-api-v2",
                 totalRequests: results.length,
                 concurrentExecution: true
             },

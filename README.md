@@ -1,31 +1,31 @@
-# 🚀 Concurrent API Request Tool
+# Concurrent API Request Tool
 
 A powerful JavaScript tool for sending multiple concurrent API requests with support for GET, POST, PUT, PATCH, and DELETE methods. Features both a browser-based UI and Node.js command-line interface.
 
-## 📋 Table of Contents
+## Table of Contents
 
-- [Features](#-features)
-- [File Structure](#-file-structure)
-- [Quick Start](#-quick-start)
-- [Browser Interface](#-browser-interface)
-- [Node.js Usage](#-nodejs-usage)
-- [API Reference](#-api-reference)
-- [Examples](#-examples)
-- [Configuration Options](#-configuration-options)
-- [Troubleshooting](#-troubleshooting)
+- [Features](#features)
+- [File Structure](#file-structure)
+- [Quick Start](#quick-start)
+- [Browser Interface](#browser-interface)
+- [Node.js Usage](#nodejs-usage)
+- [API Reference](#api-reference)
+- [Examples](#examples)
+- [Configuration Options](#configuration-options)
+- [Troubleshooting](#troubleshooting)
 
-## ✨ Features
+## Features
 
-- 🔄 **Concurrent Requests**: Send multiple async requests simultaneously
-- 🌐 **Multiple HTTP Methods**: Support for GET, POST, PUT, PATCH, DELETE
-- 🔐 **Flexible Authentication**: Optional Bearer token support
-- 📊 **Multiple Payload Modes**: Single, different payloads, auto-variations, array format
-- 🎨 **Interactive UI**: Beautiful web interface with real-time monitoring
-- 📁 **Export Results**: Download JSON results or copy to clipboard
-- ⚡ **No Timeouts**: Requests run without artificial time limits
-- 🔧 **Dynamic Configuration**: Change endpoints, tokens, and methods on the fly
+- **Concurrent Requests**: Send multiple async requests simultaneously
+- **Multiple HTTP Methods**: Support for GET, POST, PUT, PATCH, DELETE
+- **Flexible Authentication**: Optional Bearer token support
+- **Multiple Payload Modes**: Single, different payloads, auto-variations, array format
+- **Interactive UI**: Beautiful web interface with real-time monitoring
+- **Export Results**: Download JSON results or copy to clipboard
+- **No Timeouts**: Requests run without artificial time limits
+- **Dynamic Configuration**: Change endpoints, tokens, and methods on the fly
 
-## 📁 File Structure
+## File Structure
 
 ```
 ├── apiRequests.js              # Core API utility functions
@@ -40,9 +40,9 @@ A powerful JavaScript tool for sending multiple concurrent API requests with sup
 └── README.md                  # This documentation
 ```
 
-## 🚀 Quick Start
+## Quick Start
 
-### 🌐 Live Demo
+### Live Demo
 
 **Try it now**: [https://yourusername.github.io/your-repo-name](https://yourusername.github.io/your-repo-name)
 
@@ -77,7 +77,7 @@ sendConcurrentRequests(5, {
 });
 ```
 
-## 🌐 Browser Interface
+## Browser Interface
 
 ### Main Controls
 
@@ -262,7 +262,7 @@ Update global API configuration.
 }
 ```
 
-## 💡 Examples
+## Examples
 
 ### Example 1: Load Testing
 
@@ -341,7 +341,7 @@ Headers are automatically set based on configuration:
 - `Authorization: Bearer {token}` (if token provided)
 - `Content-Type: application/json` (for POST/PUT/PATCH with body)
 
-## 🔧 Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 
@@ -379,7 +379,7 @@ Solution: Check your internet connection and API endpoint availability
 - **API Rate Limits**: Check your API's rate limiting policies
 - **Memory Usage**: Large numbers of requests (>100) may consume significant memory
 
-## 🚀 GitHub Pages Deployment
+## GitHub Pages Deployment
 
 ### Quick Deploy to GitHub Pages
 
@@ -395,11 +395,11 @@ Solution: Check your internet connection and API endpoint availability
 
 ### Pre-configured for GitHub Pages
 
-✅ **Ready to deploy** - No additional setup required  
-✅ **Self-contained** - All code in single HTML file  
-✅ **Mobile responsive** - Works on all devices  
-✅ **SEO optimized** - Proper meta tags included  
-✅ **No dependencies** - Pure HTML/CSS/JavaScript  
+**Ready to deploy** - No additional setup required  
+**Self-contained** - All code in single HTML file  
+**Mobile responsive** - Works on all devices  
+**SEO optimized** - Proper meta tags included  
+**No dependencies** - Pure HTML/CSS/JavaScript  
 
 ### Custom Domain (Optional)
 
@@ -416,7 +416,7 @@ For issues or questions:
 3. Ensure your API endpoint and authentication are correct
 4. Test with a simple GET request first
 
-## 🎯 Best Practices
+## Best Practices
 
 1. **Start Small**: Test with 1-5 requests before scaling up
 2. **Use Array Format**: The "Array of Payloads" mode is most reliable
@@ -426,6 +426,6 @@ For issues or questions:
 
 ---
 
-**Happy API Testing! 🚀**
+**Happy API Testing!**
 
 *This tool is designed for development and testing purposes. Always respect API rate limits and terms of service.*
