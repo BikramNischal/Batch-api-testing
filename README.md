@@ -44,7 +44,7 @@ A powerful JavaScript tool for sending multiple concurrent API requests with sup
 
 ### Live Demo
 
-**Try it now**: [https://bikramnischal.github.io/Batch-api-testing/](Check Live)
+**Try it now**: [Check Live](https://bikramnischal.github.io/Batch-api-testing/)
 
 ### Browser Interface (Recommended)
 
