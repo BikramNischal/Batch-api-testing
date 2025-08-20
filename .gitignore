@@ -1,5 +1,6 @@
 # Node.js dependencies (if any)
 node_modules/
+examples.json
 
 # IDE files
 .vscode/
