@@ -42,9 +42,15 @@ A powerful JavaScript tool for sending multiple concurrent API requests with sup
 
 ## 🚀 Quick Start
 
+### 🌐 Live Demo
+
+**Try it now**: [https://yourusername.github.io/your-repo-name](https://yourusername.github.io/your-repo-name)
+
 ### Browser Interface (Recommended)
 
-1. **Open the interface**: Double-click `runRequests.html` in your browser
+1. **Open the interface**: 
+   - **Online**: Visit the GitHub Pages link above
+   - **Local**: Double-click `index.html` in your browser
 2. **Configure your request**:
    - Set the number of requests (1-1000)
    - Choose HTTP method (GET, POST, PUT, PATCH, DELETE)
@@ -372,6 +378,34 @@ Solution: Check your internet connection and API endpoint availability
 - **Concurrent Limit**: Most browsers limit ~6 concurrent connections per domain
 - **API Rate Limits**: Check your API's rate limiting policies
 - **Memory Usage**: Large numbers of requests (>100) may consume significant memory
+
+## 🚀 GitHub Pages Deployment
+
+### Quick Deploy to GitHub Pages
+
+1. **Fork or Clone this repository**
+2. **Push to your GitHub repository**
+3. **Enable GitHub Pages**:
+   - Go to repository Settings
+   - Scroll to "Pages" section
+   - Select "Deploy from a branch"
+   - Choose "main" branch and "/ (root)" folder
+   - Click "Save"
+4. **Access your live tool** at: `https://yourusername.github.io/repository-name`
+
+### Pre-configured for GitHub Pages
+
+✅ **Ready to deploy** - No additional setup required  
+✅ **Self-contained** - All code in single HTML file  
+✅ **Mobile responsive** - Works on all devices  
+✅ **SEO optimized** - Proper meta tags included  
+✅ **No dependencies** - Pure HTML/CSS/JavaScript  
+
+### Custom Domain (Optional)
+
+1. Add a `CNAME` file with your domain name
+2. Configure DNS settings with your domain provider
+3. Update the `og:url` meta tag in `index.html` with your domain
 
 ## 📞 Support
 
